@@ -26,9 +26,11 @@
             Holder = holder;
             Balance = balance;
         }
-        public void Withdraw(double amount)
+        //usando o virtual, permite que o Saldo pode ser
+        //sobrescrito nas subclasses.
+        public virtual void Withdraw(double amount)
         {
-            Balance -= amount;
+            Balance -= amount + 5.0;
         }
         public void Deposit(double amount)
         {

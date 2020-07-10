@@ -20,5 +20,11 @@ namespace ExemploHeranca.Entities
             //Este método atualiza a taxa de juros em cima do saldo
             Balance += Balance * InterestRate;
         }
+        public override void Withdraw(double amount)
+        {
+            //Balance -= amount; //decrementa forçando esta regra ao invés da superclasse
+            base.Withdraw(amount); //comando base utiliza toda a regra da superclasse
+            Balance -= 2.0; //assim, é possível realizar outras regras de negócio a partir do dado recebido
+        }
     }
 }
