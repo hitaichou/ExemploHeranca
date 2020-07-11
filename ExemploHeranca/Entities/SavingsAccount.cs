@@ -1,7 +1,10 @@
 ﻿
 namespace ExemploHeranca.Entities
 {
-    class SavingsAccount :Account //extende da classe Account
+    //": Account" extende da classe Account
+    //"sealed" faz com que a classe seja selada e não permite a criação 
+    //de uma subclasse
+    sealed class SavingsAccount :Account 
     {
         public double InterestRate { get; set; }
 
