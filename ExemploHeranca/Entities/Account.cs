@@ -1,6 +1,10 @@
-﻿namespace ExemploHeranca.Entities
+﻿using System;
+
+namespace ExemploHeranca.Entities
 {
-    class Account
+    //abstract --> determino que esta classe não poderá ser usada 
+    //para inserir dados
+    abstract class Account
     {
         /*
          
@@ -26,6 +30,8 @@
             Holder = holder;
             Balance = balance;
         }
+
+       
         //usando o virtual, permite que o Saldo pode ser
         //sobrescrito nas subclasses.
         public virtual void Withdraw(double amount)
